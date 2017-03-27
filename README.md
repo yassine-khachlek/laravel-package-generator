@@ -7,7 +7,7 @@ Create a ready to use Laravel package with one command that create the package s
 Install wia composer:
 
 ```
-composer require yassine-khachlek/laravel-package-generator
+composer require yk/laravel-package-generator
 ```
 
 Add the service provider to the file config/app.php:
