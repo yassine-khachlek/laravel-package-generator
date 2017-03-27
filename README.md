@@ -14,7 +14,7 @@ Add the service provider to the file config/app.php:
 
 
 ```php
-Yk\LaravelPackageGenerator\LaravelPackageExampleServiceProvider::class,
+Yk\LaravelPackageGenerator\LaravelPackageGeneratorServiceProvider::class,
 ```
 
 Create your package:
