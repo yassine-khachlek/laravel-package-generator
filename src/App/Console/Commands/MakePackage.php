@@ -78,7 +78,7 @@ class MakePackage extends Command
         $config_app = File::get(base_path('config/app.php'));
 
         $provider = join('\\',
-                    [studly_case($vendor_name), studly_case($package_name), studly_case($package_name).'Provider::class']
+                    [studly_case($vendor_name), studly_case($package_name), studly_case($package_name).'ServiceProvider::class']
                 );
 
         $provider_position = strpos($config_app, 'App\Providers\RouteServiceProvider::class');
@@ -88,10 +88,10 @@ class MakePackage extends Command
         File::put(
             base_path(
                 join('/',
-                    ['packages', $vendor_name, $package_name, 'src', studly_case($package_name).'Provider.php']
+                    ['packages', $vendor_name, $package_name, 'src', studly_case($package_name).'ServiceProvider.php']
                 )
             ),
-            view('Yk\LaravelPackageGenerator::scaffolds.provider', [
+            view('Yk\LaravelPackageGenerator::scaffolds.ServiceProvider', [
                 'vendor_name' => $vendor_name,
                 'package_name' => $package_name
             ])

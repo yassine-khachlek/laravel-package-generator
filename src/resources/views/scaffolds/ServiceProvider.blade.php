@@ -4,7 +4,7 @@ namespace {{ studly_case($vendor_name) }}\{{ studly_case($package_name) }};
 
 use Illuminate\Support\ServiceProvider;
 
-class {{ studly_case($package_name) }}Provider extends ServiceProvider
+class {{ studly_case($package_name) }}ServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -13,7 +13,7 @@ class {{ studly_case($package_name) }}Provider extends ServiceProvider
      */
     public function boot()
     {
-    	echo 'hit';
+    	echo '{{ studly_case($vendor_name) }}\{{ studly_case($package_name) }}\{{ studly_case($package_name) }}ServiceProvider';
     }
     /**
      * Register the application services.

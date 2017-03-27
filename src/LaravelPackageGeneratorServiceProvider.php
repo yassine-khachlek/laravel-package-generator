@@ -4,7 +4,7 @@ namespace Yk\LaravelPackageGenerator;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelPackageGeneratorProvider extends ServiceProvider
+class LaravelPackageGeneratorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
