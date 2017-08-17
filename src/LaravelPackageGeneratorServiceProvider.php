@@ -17,7 +17,8 @@ class LaravelPackageGeneratorServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \Yk\LaravelPackageGenerator\App\Console\Commands\MakePackage::class,
+                \Yk\LaravelPackageGenerator\App\Console\Commands\Generate::class,
+                \Yk\LaravelPackageGenerator\App\Console\Commands\Remove::class,
             ]);
         }
 

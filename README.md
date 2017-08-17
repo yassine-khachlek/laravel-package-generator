@@ -18,16 +18,22 @@ Yk\LaravelPackageGenerator\LaravelPackageGeneratorServiceProvider::class,
 ```
 
 
-Publish assets:
+Publish configuration:
 
 ```
 php artisan vendor:publish --tag=config
 ```
 
-Create your package:
+Generate and register your package:
 
 ```
-php artisan make:package vendor_name package_name
+php artisan package:generate vendor_name package_name
+```
+
+Remove and unregister your package:
+
+```
+php artisan package:remove vendor_name package_name
 ```
 
 ## License

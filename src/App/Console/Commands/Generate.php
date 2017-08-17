@@ -8,21 +8,21 @@ use Artisan;
 use Config;
 use File;
 
-class MakePackage extends Command
+class Generate extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:package {vendor_name} {package_name}';
+    protected $signature = 'package:generate {vendor_name} {package_name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new package';
+    protected $description = 'Generate a new package';
 
     /**
      * The packages path.
@@ -30,7 +30,6 @@ class MakePackage extends Command
      * @var string
      */
     protected $packages_path = 'packages';
-
 
     /**
      * Create a new command instance.
