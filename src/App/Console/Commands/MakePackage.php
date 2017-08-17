@@ -16,12 +16,22 @@ class MakePackage extends Command
      * @var string
      */
     protected $signature = 'make:package {vendor_name} {package_name}';
+
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Create a new package';
+
+    /**
+     * The packages path.
+     *
+     * @var string
+     */
+    protected $packages_path = 'packages';
+
+
     /**
      * Create a new command instance.
      *
@@ -30,6 +40,8 @@ class MakePackage extends Command
     public function __construct()
     {
         parent::__construct();
+
+        $this->packages_path = Config::get('vendor.yk.laravel-package-generator.package.path');
     }
     /**
      * Execute the console command.
@@ -46,7 +58,7 @@ class MakePackage extends Command
 
         $package_path = base_path(
             join('/',
-                ['packages', $vendor_name, $package_name]
+                [$this->packages_path, $vendor_name, $package_name]
             )
         );
 

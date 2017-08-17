@@ -20,6 +20,10 @@ class LaravelPackageGeneratorServiceProvider extends ServiceProvider
                 \Yk\LaravelPackageGenerator\App\Console\Commands\MakePackage::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__.'/config' => config_path('vendor/yk/laravel-package-generator'),
+        ], 'config');
     }
 
     /**
@@ -29,6 +33,8 @@ class LaravelPackageGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->mergeConfigFrom(
+            __DIR__.'/config/package.php', 'vendor.yk.laravel-package-generator.package'
+        );
     }
 }

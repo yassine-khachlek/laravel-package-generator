@@ -17,6 +17,13 @@ Add the service provider to the file config/app.php:
 Yk\LaravelPackageGenerator\LaravelPackageGeneratorServiceProvider::class,
 ```
 
+
+Publish assets:
+
+```
+php artisan vendor:publish --tag=config
+```
+
 Create your package:
 
 ```
